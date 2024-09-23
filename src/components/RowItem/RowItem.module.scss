@@ -1,0 +1,23 @@
+.item {
+    cursor: pointer;
+    display: flex;
+    gap: 10px;
+
+    &> input {
+        cursor: pointer;
+    }
+
+    &:hover {
+        background-color: aqua;
+    }
+}
+
+.selected {
+    background-color: aquamarine;
+}
+
+.ellipsis {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}

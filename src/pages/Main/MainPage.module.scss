@@ -1,0 +1,15 @@
+.mainLayout {
+    padding: 50px;
+    flex-direction: row;
+    display: flex;
+    justify-content: center;
+    flex-grow: 1;
+    background-color: aquamarine;
+}
+
+.buttonsMenu {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
