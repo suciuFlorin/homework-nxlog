@@ -4,43 +4,38 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ## Available Scripts
 
-In the project directory, you can run:
-
 ### `npm start`
 
 Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+### Create ‘Transfer List’ component.
 
-### `npm test`
+#### Description
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+General component structure is: it should have 2 columns, with different items in each
+and pagination with controls. Item in each column has text label + input(checkbox type) for selecting which item should be transferred to the opposite column. Items can be transferred for column 1 to column 2 and the opposite. Controls should have next buttons:
 
-### `npm run build`
+1) transfer selected items from column 1 to column 2;
+2) transfer selected items from column 2 to column 1;
+3) transfer all items from column 1 to column 2;
+4) transfer all items from column 2 to column 1;
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+For the buttons ‘1)’ and ‘2)’, they should be active only when items in appropriate column is selected(e.g. if user selects items in column 1 - then button ‘1)’ should be active. If no items selected in column 1 - button ‘1)’ is disabled. Same goes for column 2 and button ‘2)’).
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+For the buttons ‘3)’ and ‘4)’. They are active only if items in appropriate column are present(e.g. If there are no items in column 1 - button ‘3)’ is disabled. Same goes for button ‘4)’).
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Images for better understanding of what should be done:
+https://prnt.sc/vltUMFVRPWfM - default view
+https://prnt.sc/RnRxvaDaBGRv - view when items in column 1 are selected and button ‘1)’ is active
+https://prnt.sc/mY0YuqaB9OuK - view when items in column 2 are selected and button ‘2)’ is active
+https://prnt.sc/nnz7QmSZ7ITx - view when items in column 2 are absent, so button ‘4)’ is disabled
 
-### `npm run eject`
+Acceptance criteria:
+1) All functionality from the description above is done
+2) Use React hooks for internal component state(useState)
+3) Use Functional component type
+4) Ideally implement it using ‘React create app’ or any other way you prefer
+5) Would be nice to add some ‘handy’ and ‘nice’ styling using SASS/SCSS
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).

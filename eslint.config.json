@@ -1,0 +1,18 @@
+{
+  "env": {
+    "browser": true,
+    "es2021": true
+  },
+  "languageOptions": {
+    "parserOptions": {
+      "ecmaFeatures": {
+        "jsx": true,
+        "modules": true
+      }
+    }
+  },
+  "rules": {
+    "semi": "error",
+    "prefer-const": "error"
+  }
+}
